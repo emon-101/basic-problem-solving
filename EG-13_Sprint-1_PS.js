@@ -1,3 +1,7 @@
+/**
+ * @param {number} year
+ * @return {boolean}
+ */
 function isLeapYear(year) {
   if (year % 400 === 0) {
     return true;
@@ -9,6 +13,10 @@ function isLeapYear(year) {
     return false;
   }
 }
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
 
 function generateFibonacci(n) {
   let result = [];
@@ -26,7 +34,11 @@ function generateFibonacci(n) {
 
   return result;
 }
-
+/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
 function findGCD(a, b) {
   while (b !== 0) {
     let remainder = a % b;
@@ -36,7 +48,11 @@ function findGCD(a, b) {
 
   return a;
 }
-
+/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
 function findLCM(a, b) {
   function findGCD(a, b) {
     while (b !== 0) {
@@ -50,7 +66,10 @@ function findLCM(a, b) {
 
   return (a * b) / findGCD(a, b);
 }
-
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
 function isPrime(num) {
   if (num < 2) {
     return false;
@@ -64,6 +83,11 @@ function isPrime(num) {
 
   return true;
 }
+/**
+ * @param {number[]} arr1
+ * @param {number[]} arr2
+ * @return {number[]}
+ */
 
 function mergeSortedArrays(arr1, arr2) {
   let result = [];
@@ -92,7 +116,10 @@ function mergeSortedArrays(arr1, arr2) {
 
   return result;
 }
-
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
 function findMedian(nums) {
   let sorted = [...nums].sort((a, b) => a - b);
 
@@ -104,7 +131,10 @@ function findMedian(nums) {
     return (sorted[middle - 1] + sorted[middle]) / 2;
   }
 }
-
+/**
+ * @param {number[]} nums
+ * @return {number|null}
+ */
 function findSecondLargest(nums) {
   let largest = -Infinity;
   let secondLargest = -Infinity;
@@ -120,7 +150,10 @@ function findSecondLargest(nums) {
 
   return secondLargest === -Infinity ? null : secondLargest;
 }
-
+/**
+ * @param {Array} arr
+ * @return {*}
+ */
 function findMode(arr) {
   let frequency = {};
   let mode = arr[0];
@@ -137,7 +170,10 @@ function findMode(arr) {
 
   return mode;
 }
-
+/**
+ * @param {string[]} arr
+ * @return {string[]}
+ */
 function naturalSort(arr) {
   return arr.sort((a, b) =>
     a.localeCompare(b, undefined, {
