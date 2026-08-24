@@ -181,3 +181,5 @@ function naturalSort(arr) {
     }),
   );
 }
+
+console.log(isLeapYear(2020)); 
